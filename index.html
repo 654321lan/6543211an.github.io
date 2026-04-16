@@ -2,32 +2,123 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>我的GitHub个人博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的前端成长博客</title>
     <style>
-        * {margin: 0; padding: 0; box-sizing: border-box;}
-        body {max-width: 800px; margin: 50px auto; padding: 0 20px; font-family: "微软雅黑", sans-serif;}
-        h1 {color: #2c3e50; text-align: center; margin-bottom: 40px;}
-        .img-box {margin: 30px 0;}
-        .img-box h3 {margin-bottom: 15px; color: #34495e;}
-        .img-box img {max-width: 100%; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);}
-        p {margin-top: 10px; color: #666; line-height: 1.6;}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f7fa;
+            padding-bottom: 50px;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .card h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        .card h3 {
+            margin: 20px 0 15px;
+            color: #444;
+        }
+        .card p {
+            margin-bottom: 15px;
+            text-indent: 2em;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .profile-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        .img-caption {
+            text-align: center;
+            color: #888;
+            margin-top: -10px;
+            text-indent: 0;
+        }
+        footer {
+            text-align: center;
+            color: #888;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
-    <h1>我的个人博客</h1>
+    <header>
+        <h1>我的前端成长博客</h1>
+        <p>记录学习点滴，见证技术成长</p>
+    </header>
 
-    <!-- 实验要求1：绝对路径引用的图片 -->
-    <div class="img-box">
-        <h3>1. 绝对路径引用的图片</h3>
-        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" alt="绝对路径图片">
-        <p>绝对路径说明：完整的公网URL地址，直接指向互联网上的图片资源，不受当前网页文件位置影响</p>
+    <div class="container">
+        <!-- 个人简介板块 -->
+        <div class="card">
+            <h2>关于我</h2>
+            <div class="profile-text">
+                <p>一名正在学习Web前端开发的学生，对网页制作、交互设计充满兴趣。</p>
+                <p>目前正在学习HTML、CSS、JavaScript基础，希望通过实战项目积累经验，一步步成为合格的前端开发者。</p>
+                <p>这个博客是我用GitHub Pages搭建的第一个个人站点，既是课程实验的成果，也是我记录学习的新起点。</p>
+            </div>
+            <!-- 相对路径引用的图片：你的学习日常/个人照片 -->
+            <img src="./image/local-img.jpg" alt="我的学习日常">
+            <p class="img-caption">我的学习桌面日常</p>
+        </div>
+
+        <!-- 学习笔记板块 -->
+        <div class="card">
+            <h2>学习笔记：第一次用GitHub搭建博客的心得</h2>
+            <p>这次课程实验，让我第一次完整接触了GitHub的使用，也对网页开发有了更直观的理解。从注册账号、创建仓库，到写HTML页面、配置GitHub Pages，一步步踩坑、一步步解决问题，最终看到自己的博客能正常访问的时候，真的很有成就感。</p>
+            
+            <h3>对网页路径的理解</h3>
+            <p>之前一直对绝对路径和相对路径的概念很模糊，这次通过实战终于搞懂了。相对路径是基于当前文件的位置去找资源，更适合站点内部的文件引用；而绝对路径是完整的网络地址，不受文件位置影响，适合引用公网上的固定资源。</p>
+            
+            <!-- 绝对路径引用的图片：前端开发/代码相关配图 -->
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900" alt="前端开发代码实拍">
+            <p class="img-caption">前端开发的日常：代码与调试</p>
+
+            <h3>后续的学习计划</h3>
+            <p>接下来打算继续深入学习CSS布局和JavaScript基础，给这个博客添加更多功能，比如文章列表、分页，还有课程里提到的评论功能。也会在这里更新更多的学习笔记，把自己踩过的坑、学到的知识点都记录下来，既是给自己的复盘，也希望能帮到同样在学习的同学。</p>
+        </div>
     </div>
 
-    <!-- 实验要求2：相对路径引用的图片 -->
-    <div class="img-box">
-        <h3>2. 相对路径引用的图片</h3>
-        <img src="./image/local-img.jpg" alt="相对路径图片">
-        <p>相对路径说明：以当前index.html文件所在位置为基准，找到同级image文件夹里的图片，./ 代表当前目录</p>
-    </div>
+    <footer>
+        <p>© 2024 我的前端成长博客 | 基于 GitHub Pages 搭建</p>
+    </footer>
 </body>
 </html>
